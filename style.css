@@ -1,0 +1,192 @@
+/*  smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/*  default margins, paddings, and set box-sizing  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* global style  */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333; /* Dark text */
+    transition: background-color 0.3s, color 0.3s; /* Smooth  transition */
+}
+
+/* header and navigation bar  */
+header {
+    background-color: #222;
+    padding: 15px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: #fff; /* White text for name*/
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links*/
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00adb5; /* Highlight color on hover*/
+}
+
+/* theme toggle button */
+#theme{
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #00adb5;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #019ca3; 
+}
+
+section {
+    padding: 60px 40px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #00adb5; /*  color for headings */
+}
+
+/* about section  */
+.about-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto; /* Center content */
+}
+
+.about-content h2 {
+    margin-bottom: 10px;
+}
+
+#about p {
+    margin-bottom: 15px;
+    max-width: 600px;
+}
+
+.about-image img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%; /* Perfect circle */
+    object-fit: cover;
+    border: 2px solid #0e0e0e;
+}
+
+.animated-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #e0d68f;
+    margin-bottom: 10px;
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px); /*lift effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /*Shadow on hover */
+}
+
+/* achievement list */
+#achievements ul {
+    padding-left: 20px;
+}
+
+#achievements li {
+    margin-bottom: 10px;
+}
+
+/* contact section */
+#contact p {
+    font-size: 1.1rem;
+}
+
+/* Footer section */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #00adb5;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+footer a:hover {
+    opacity: 0.7; /* Fade effect on hover */
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+.dark-theme header,
+.dark-theme footer {
+    background-color: #1e1e1e;
+}
+
+.dark-theme .project {
+    background-color: #1f1f1f;
+    color: #f4f4f4; /* Ensure text is readable */
+}
+
+.dark-theme nav ul li a {
+    color: #f4f4f4;
+}
+
+/* responsive design  mobiles */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /*vertically */
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column; 
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    #about p {
+        max-width: 100%; 
+    }
+}
